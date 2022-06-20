@@ -23,8 +23,8 @@ def retrieve_tv_shows(file):
 
 def write_json(list_of_shows):
     """Takes a list of fields and attributes and returns a JSON file."""
-    with open('tv_show_info.json', 'w') as json_file:
-        json.dump(list_of_shows, json_file, indent=4)
+    with open('tv_show_info.json', 'w', encoding='utf-8') as json_file:
+        json.dump(list_of_shows, json_file, indent=4, ensure_ascii=False)
 
 
 def main():
